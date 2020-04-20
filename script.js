@@ -9,7 +9,7 @@ var highest = document.querySelector("#highest");
 var back = document.querySelector("#back");
 
 var score = 0;
-var totalSeconds = 10;
+var totalSeconds = 120;
 var question = 1;
 var going = true;
 var highscore;
