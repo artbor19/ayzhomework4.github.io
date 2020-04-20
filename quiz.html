@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework 4 Coding Quiz</title>
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Added a link to our external stylesheet-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class ="col-lg-12">Coding Quiz Game</h1>
+    <div class="container" id="questions">
+        <h2 id="counter">Question</h2>
+        <h3 id ="question"></h3>
+        <h5 id="option-1"></h5>
+        <br>
+        <h5 id="option-2"></h5>
+        <br>
+        <h5 id="option-3"></h5>
+        <br>
+        <h5 id="option-4"></h5>
+    </div>
+        
+    
+<script type="text/javascript">
+  var question;
+  var score;
+  var quizGoing;
+  
+
+  function setDef(){
+    quizGoing = true;
+    question = 1;
+    score = 0;
+  }
+
+  setDef();
+
+  function setQuestion(){
+    $("#counter").text("Question " + question);
+  }
+
+  function correct(){
+    score+=10;
+    question++;
+  }
+
+  function wrong(){
+    score--;
+  }
+
+  while(quizGoing){
+    if(question =1){
+      $("#question").text("Name of Shape With Four Sides");
+      $("#option-1").text("Rectangle");
+      $("#option-2").text("Circle");
+      $("#option-3").text("Triangle");
+      $("#option-4").text("Pentagon");
+      $("#option-1").click(function(){
+        question++;
+      });
+    }
+    else if(question =2){
+      $("#question").text("Name of Shape With Four Sides");
+      $("#option-1").text("DC");
+      $("#option-2").text("Marvel");
+      $("#option-3").text("X-Men");
+      $("#option-4").text("Ninja Turtles");
+    }
+  }
+
+</script>
+
+</body>
+</html>
